@@ -16,7 +16,7 @@ const MealsList = () => {
             <h1>Meals List using Context API</h1>
 
             {/* Use map to display the list of meals */}
-            {meals.map((meal, index) => (<h2 key={index}>{meal}</h2>))}
+            {meals.map((meal, index) => (<h2 className="card" key={index}>{meal}</h2>))}
         </div>
     )
 
