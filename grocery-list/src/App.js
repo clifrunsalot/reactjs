@@ -1,11 +1,14 @@
+import { useState } from 'react';
 import './App.css';
 import Cart from './components/Cart';
-import { getShoppingList } from './data/shopping_data';
-import { useState } from 'react';
+import { getDefaultList } from './data/shopping_data';
 
+/**
+ * Describes main application component.
+ */
 function App() {
 
-  const [shoppingList, setShoppingList] = useState(getShoppingList());
+  const [shoppingList, setShoppingList] = useState(getDefaultList());
 
   return (
     <div>

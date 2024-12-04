@@ -35,12 +35,28 @@ const shoppingList = [
     { id: 25, name: "Lip Balm", quantity: 1, store: storeList.find((store) => store.tag === "W"), food: false, selected: false },
     { id: 26, name: "Hand Sanitizer", quantity: 1, store: storeList.find((store) => store.tag === "W"), food: false, selected: false }];
 
-export const getShoppingList = () => {
-    const foodList = shoppingList.filter((a) => a.food === true)
-                        .sort((a, b) => a.name.localeCompare(b.name));
-    const nonFoodList = shoppingList.filter((a) => a.food === false)
-                        .sort((a, b) => a.name.localeCompare(b.name));
-    return [...foodList, ...nonFoodList];
+function getSortedFoodList() {
+    return shoppingList.filter((a) => a.food === true).sort((a, b) => a.name.localeCompare(b.name));
+}
+
+function getSortedNonFoodList() {
+    return shoppingList.filter((a) => a.food === false).sort((a, b) => a.name.localeCompare(b.name));
+}
+
+export const getSelectedList = () => {
+    const foodList = getSortedFoodList();
+    const nonFoodList = getSortedNonFoodList();
+    return [...foodList, ...nonFoodList].filter((a) => a.selected === true);
+}
+
+export const getUnselectedList = () => {
+    const foodList = getSortedFoodList();
+    const nonFoodList = getSortedNonFoodList();
+    return [...foodList, ...nonFoodList].filter((a) => a.selected === false);
+}
+
+export const getDefaultList = () => {
+    return [...getSortedFoodList(), ...getSortedNonFoodList()];
 }
 
 export const getStoreList = () => {

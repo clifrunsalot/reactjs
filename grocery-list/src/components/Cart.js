@@ -1,11 +1,14 @@
-import Item from './Item';
 import { useState } from 'react';
+import Item from './Item';
 
-// Defines grocery cart.
+/**
+ * Describes grocery cart component.
+ * @param {object} props - Component properties.
+ */
 function Cart(props) {
 
     // Retrieves shopping list from props.
-    const shoppingList = props.shoppingList;
+    const { shoppingList } = props;
 
     return (
         <div>
