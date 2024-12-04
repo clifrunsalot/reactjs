@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import Item from './Item';
 
 /**
@@ -12,6 +11,7 @@ function Cart(props) {
 
     return (
         <div>
+            <h1 className="title center">Shopping Buddy</h1>
             {shoppingList.map(
                 (itm) => (
                     <div key={itm.id}>
