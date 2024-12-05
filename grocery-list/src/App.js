@@ -18,20 +18,31 @@ function App() {
 
       {/* Add a navigation bar to the app. */}
       <nav>
-          <img src={cart}
-            height="40px" width="40px" alt="cart" className="cart" />
+        <img src={cart}
+          height="40px" width="40px" alt="cart" className="cart" />
         <Link to="/" className="nav-item">Home</Link>
         <Link to="/about" className="nav-item">About</Link>
       </nav>
 
-      {/* Add routes to the app. */}
-      <Routes>
-        <Route path="/" element={<Cart shoppingList={shoppingList} />} />
-        <Route path="/about" element={<About />} />
-      </Routes>
+      {/* This is where the views change */}
+      <div className="content">
+
+        {/* Add routes to the app. */}
+        <Routes>
+          <Route path="/" element={<Cart shoppingList={shoppingList} />} />
+          <Route path="/about" element={<About />} />
+        </Routes>
+
+      </div>
+
+      {/* Add a footer to the app.*/}
+      <footer className="footer">
+        <p>&copy; 2024 Shopping Buddy. All rights reserved.</p>
+      </footer>
 
     </div>
   )
 }
+
 
 export default App;

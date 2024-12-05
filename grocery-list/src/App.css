@@ -38,11 +38,15 @@
 }
 
 nav {
-  background: #f47070;
+  background: #f48080;
   padding: 20px;
   display: flex;
   align-items: center;
   padding: 10px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  border-bottom: 1px solid #e7e7e7;
 }
 
 nav a {
@@ -72,20 +76,22 @@ nav a {
   text-align: center;
 }
 
-/* App.css */
-/* nav {
-  display: flex;
-  align-items: center;
-  padding: 10px;
+.footer {
   background-color: #f8f8f8;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  border-top: 1px solid #e7e7e7;
 }
 
-.nav-item {
-  margin-left: 20px;
-  text-decoration: none;
+.footer p {
+  margin: 0;
   color: #333;
 }
 
-.cart {
-  margin-right: 20px;
-} */
+.context {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
