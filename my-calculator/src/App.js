@@ -57,7 +57,7 @@ function App() {
       </div>
       <form>
         <p ref={resultRef}>Result: {result}</p>
-        <input type="text" ref={inputRef} placeholder='Enter a number'/>
+        <input pattern="[0-9]" type="text" ref={inputRef} placeholder='Enter a number'/>
         <br />
         <button onClick={plus}>add</button>
         <button onClick={minus}>subtract</button>
