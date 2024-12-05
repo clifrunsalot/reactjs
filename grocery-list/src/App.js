@@ -19,9 +19,9 @@ function App() {
       {/* Add a navigation bar to the app. */}
       <nav>
         <img src={cart}
-          height="40px" width="40px" alt="cart" className="cart" />
-        <Link to="/" className="nav-item">Home</Link>
-        <Link to="/about" className="nav-item">About</Link>
+          height="40px" width="40px" alt="cart" title="Shopping Buddy" className="cart" />
+        <Link to="/" className="nav-item" title="Home">Home </Link>
+        <Link to="/about" className="nav-item" title="About">About</Link>
       </nav>
 
       {/* This is where the views change */}
