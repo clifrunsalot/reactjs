@@ -47,6 +47,7 @@ nav {
   top: 0;
   width: 100%;
   border-bottom: 1px solid #e7e7e7;
+  height: 40px;
 }
 
 nav a {
@@ -84,6 +85,7 @@ nav a {
   width: 100%;
   text-align: center;
   border-top: 1px solid #e7e7e7;
+  height: 20px;
 }
 
 .footer p {
@@ -94,4 +96,6 @@ nav a {
 .context {
   padding-top: 60px;
   padding-bottom: 60px;
+  overflow: auto;
+  height: calc(100vh - 60px);
 }
