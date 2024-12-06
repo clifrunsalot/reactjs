@@ -85,7 +85,7 @@ function App() {
   function resetInput(e) {
     e.preventDefault();
     setErrorMessage('');
-    inputRef.current.value = '';
+    inputRef.current.value = 0;
   }
 
   return (
